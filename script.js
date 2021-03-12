@@ -52,7 +52,7 @@ function removeR() {
       numCols = 0;
     }
     numRows--;
-    
+
     let rows = table.lastElementChild; //gets the last row in the table and then removes it
     table.removeChild(rows);
   }
@@ -64,7 +64,7 @@ function removeC() {
     let table = document.getElementById("grid");//storing element grid in an easy to call variable
     if (numCols > 0) {
         numCols--;
-        
+
         for (let i = 0; i < numRows; i++) {
             let rows = table.rows[i];
             rows.deleteCell(rows.cells.length -1);
@@ -113,4 +113,12 @@ function clearAll() {
       col.style.backgroundColor = "";//clear color
     }
   }
+}
+
+function getInput()
+{
+    //set color to hex value
+    colorSelected = document.getElementById("ColorInput").value;
+    //testing
+    console.log(colorSelected);
 }
